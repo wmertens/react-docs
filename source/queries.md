@@ -146,8 +146,7 @@ const ProfileWithData = graphql(CurrentUserForLayout, {
 })(Profile);
 ```
 
-> This does not pass `data` or run the `options` or `props` methods if passed. It effectively bypasses the HOC.
-
+> This sets `data` to `{skipped: true}`, and does not run the `options` method if passed. It still runs `props` if passed.
 
 <h2 id="graphql-props">Controlling child props</h2>
 
